@@ -9,7 +9,17 @@ buildscript {
 				  version: '1.0-SNAPSHOT'
     }
 }
+
 apply plugin: 'org.samples.greeting'
+
+greeting {
+    message "Hello, gradle"
+    greeter "Custom greeter"
+
+    info {
+        email "test@gmail.com"
+    }
+}
 
 task greeting(type: org.gradle.GreetingTask) {
     greeting = 'howdy!'
